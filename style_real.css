@@ -107,8 +107,12 @@ header::before {
 
 @media (max-width: 768px) {
   .container-fotos-esquerda {
+    position: static;
+    transform: none;    /* Cancela o translateY(-50%) do desktop */
     flex-direction: column; /* Empilha os elementos em pé */
     height: auto;           /* Garante que a altura se ajuste ao novo tamanho */
+    margin-bottom: 1rem;
+    align-items: center;
   }
   
   .container-fotos-esquerda img {
@@ -4668,7 +4672,7 @@ footer {
     height: 100px;       /* Altura da foto */ 
     border-radius: 8px; /* Bordas arredondadas */
     overflow: hidden;   /* Garante que a imagem não saia da borda */
-    object-fit: fill;
+    background-color: rgba(255,255,255,0.1); /* Fundo caso imagem não carregue */
 }
 
 
@@ -4678,7 +4682,6 @@ footer {
     height: 100%;
     object-fit: cover;  /* Faz a foto preencher o espaço sem distorcer */
     display: block;
-    object-fit: contain;
 }
 
 .forte-nova-aba { margin: 0; padding: 0; box-sizing: border-box; }
@@ -4957,6 +4960,25 @@ main {
     flex-direction: column; /* coloca uma abaixo da outra */
     align-items: center;    /* centraliza */
     gap: 20px;              /* espaço entre elas */
+}
+
+.forte-nova-aba .espaco-imagem {
+    width: 100%;
+    max-width: 860px;
+}
+
+.forte-nova-aba .espaco-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--line, #d8c8a8);
+    border-radius: 4px;
+}
+
+.forte-nova-aba .espaco-video {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
 }
 
 
