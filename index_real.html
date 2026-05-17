@@ -398,14 +398,79 @@
       <style>
 /* Garantir que o wrapper não vaze estilos */
 .forte-nova-aba { all: unset; display: block; box-sizing: border-box; font-family: "Georgia", "Times New Roman", Times, serif; }
+
+/* Corrige o hero resetado pelo all:unset */
+.forte-nova-aba .hero {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  height: 70vh !important;
+  min-height: 420px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+.forte-nova-aba .hero__img {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  max-width: none !important;
+}
+.forte-nova-aba .hero__overlay {
+  position: absolute !important;
+  top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.75)) !important;
+  z-index: 1 !important;
+}
+.forte-nova-aba .hero__content {
+  position: relative !important;
+  z-index: 10 !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  padding: 2rem 1.5rem 3rem !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+.forte-nova-aba .hero__kicker {
+  font-family: Arial, sans-serif !important;
+  font-size: 0.8rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2em !important;
+  color: rgba(255,255,255,0.85) !important;
+  margin-bottom: 0.75rem !important;
+  display: block !important;
+}
+.forte-nova-aba .hero__title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 2.8rem !important;
+  color: #fff !important;
+  line-height: 1.1 !important;
+  display: block !important;
+  margin: 0 !important;
+}
+.forte-nova-aba .hero__subtitle {
+  margin-top: 1rem !important;
+  font-size: 1.1rem !important;
+  color: rgba(255,255,255,0.9) !important;
+  display: block !important;
+}
       </style>
       <div class="forte-nova-aba">
 
 
     <header class="hero">
-        <div class="eyebrow">5 de julho de 1922</div>
-        <h1>A Revolta do Forte<br>de Copacabana</h1>
-        <div class="date">— Os 18 do Forte —</div>
+        <img class="hero__img" src="fotos/background.jpg" alt="Os 18 do Forte de Copacabana" />
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <p class="hero__kicker">5 de julho de 1922 · Brasil República</p>
+            <h1 class="hero__title">A Revolta do Forte<br>de Copacabana</h1>
+            <p class="hero__subtitle">— Os 18 do Forte —</p>
+        </div>
     </header>
 
     <nav class="main-nav">
@@ -1704,7 +1769,7 @@
             <!-- JOÃO CÂNDIDO -->
             <div class="chibata-caixa">
               <h3>O Líder dos Revoltosos</h3>
-              <img src="fotos/Marinheiros.jpeg" alt="João Cândido, o Almirante Negro">
+              <img src="fotos/Marinheiro.jpeg" alt="João Cândido, o Almirante Negro">
               <p>João Cândido Felisberto foi um marinheiro brasileiro nascido no Rio Grande do Sul e ficou conhecido por liderar a Revolta da Chibata, em 1910. O movimento aconteceu porque os marinheiros sofriam com baixos salários, más condições de trabalho e castigos físicos, como as chibatadas. João Cândido liderou a revolta exigindo o fim desses castigos e melhores condições na Marinha. Durante o movimento, os revoltosos chegaram a controlar navios de guerra importantes do país. Por sua coragem e liderança, ele ficou conhecido como "Almirante Negro". Mesmo com a promessa do governo de atender às exigências, João Cândido foi perseguido, preso e expulso da Marinha. Hoje, ele é lembrado como símbolo da luta contra a violência e a injustiça.</p>
             </div>
 
