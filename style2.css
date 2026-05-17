@@ -1,123 +1,162 @@
-        /* Configurações Gerais de Estilo */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+/* Configurações Gerais de Estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        body {
-            background-color: #f4f6f9;
-            color: #333;
-            line-height: 1.6;
-        }
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
 
-        /* Cabeçalho */
-        header {
-            background: linear-gradient(135deg, #07290c 0%, #19863a 100%);
-            color: #fff;
-            text-align: center;
-            padding: 3rem 1rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+/* Container das Fotos Alinhado à Esquerda */
+.container-fotos-esquerda {
+    position: absolute;
+    left: 2rem;
+    display: flex;
+    gap: 15px; /* Espaço entre as duas fotos */
+}
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-family: 'Crimson Pro', serif;
-        }
+/* Moldura retangular com borda amarela */
+.moldura-foto {
+    width: 200px;           /* Largura do retângulo */
+    height: 90px;           /* Altura do retângulo */
+    border-radius: 4px;     /* Curvinha leve nos cantos */
+    overflow: hidden;       /* Garante que nada da foto passe da borda da moldura */
+    display: flex;          /* Flexbox para ajudar no alinhamento interno */
+}
 
-        h2{
-              font-family: 'Crimson Pro', serif;
-        }
+.moldura-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Preenche todo o espaço de 200x90px sem distorcer a imagem */
+    object-position: center; /* Garante que a foto fique centralizada */
+}
 
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            font-family: 'Crimson Pro', serif;
-        }
+/* Ajuste no Header para o título não bater nas fotos */
+header {
+    background: linear-gradient(135deg, #07290c 0%, #19863a 100%);
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+}
 
-        /* Container Principal */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
+/* Container do Texto do Header */
+.header-texto {
+    max-width: 700px;
+}
 
-        /* Grid das 7 Revoluções */
-        .revolucoes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            padding-bottom: 3rem;
-        }
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Crimson Pro', serif;
+}
 
-        /* Estilização dos Links/Cards */
-        .card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
+h2 {
+    font-family: 'Crimson Pro', serif;
+}
 
-        .revolucao-card {
-            background-color: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-family: 'Crimson Pro', serif;
+}
 
-        /* Efeito ao passar o mouse */
-        .card-link:hover .revolucao-card {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-        }
+/* Container Principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
 
-        /* Espaço para as Fotos */
-        .img-container {
-            width: 100%;
-            height: 200px;
-            background-color: #e2e8f0; /* Cor de fundo caso a imagem suma ou falhe */
-            position: relative;
-            overflow: hidden;
-        }
+/* Grid das 7 Revoluções */
+.revolucoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
 
-        .img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Garante que a foto preencha o espaço sem distorcer */
-            transition: transform 0.3s ease;
-        }
-
-        .card-link:hover .img-container img {
-            transform: scale(1.05); /* Zoom sutil na imagem ao passar o mouse */
-        }
-
-        /* Texto do Card */
-        .card-body {
-            padding: 1.5rem;
-            text-align: center;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border-top: 4px solid #ffee00;
-        }
-
-        .card-body h2 {
-            font-size: 1.25rem;
-            color: #1e3c72;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Remove a linha de baixo de todos os links */
-a {
+/* Estilização dos Links/Cards */
+.card-link {
     text-decoration: none;
-    color: inherit; /* Opcional: faz o texto herdar a cor original dele e não ficar azul */
+    color: inherit;
+    display: block;
+}
+
+.revolucao-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efeito ao passar o mouse (Agora funcionando com a classe aplicada) */
+.card-link:hover .revolucao-card {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Espaço para as Fotos */
+.img-container {
+    width: 100%;
+    height: 200px;
+    background-color: #e2e8f0; 
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+}
+
+.card-link:hover .img-container img {
+    transform: scale(1.05); 
+}
+
+/* Texto do Card */
+.card-body {
+    padding: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 4px solid #ffee00;
+}
+
+.card-body h2 {
+    font-size: 1.25rem;
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsividade: impede que as fotos fiquem em cima do texto em telas de celular */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+    .container-fotos-esquerda {
+        position: static;
+        margin-bottom: 1.5rem;
+        justify-content: center;
+    }
 }
