@@ -4668,19 +4668,16 @@ footer {
 
 /* Estilização dos espaços das fotos */
 .moldura-foto {
-    width: 160px;       /* Largura da foto (ajuste como preferir) */
+    width: 180px;       /* Largura da foto (ajuste como preferir) */
     height: 100px;       /* Altura da foto */ 
-    border-radius: 8px; /* Bordas arredondadas */
     overflow: hidden;   /* Garante que a imagem não saia da borda */
-    background-color: rgba(255,255,255,0.1); /* Fundo caso imagem não carregue */
 }
 
 
 
 .moldura-foto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* Faz a foto preencher o espaço sem distorcer */
+    width: 85%;
+    height: 70%;
     display: block;
 }
 
