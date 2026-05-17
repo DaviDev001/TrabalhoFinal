@@ -16,14 +16,17 @@ body {
 .container-fotos-esquerda {
     position: absolute;
     left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     gap: 15px; /* Espaço entre as duas fotos */
+    z-index: 10;
 }
 
 /* Moldura retangular com borda amarela */
 .moldura-foto {
     width: 200px;           /* Largura do retângulo */
-    height: 90px;           /* Altura do retângulo */
+    height: 60px;           /* Altura do retângulo */
     border-radius: 4px;     /* Curvinha leve nos cantos */
     overflow: hidden;       /* Garante que nada da foto passe da borda da moldura */
     display: flex;          /* Flexbox para ajudar no alinhamento interno */
@@ -34,6 +37,7 @@ body {
     height: 100%;
     object-fit: cover;      /* Preenche todo o espaço de 200x90px sem distorcer a imagem */
     object-position: center; /* Garante que a foto fique centralizada */
+    display: block;
 }
 
 /* Ajuste no Header para o título não bater nas fotos */
@@ -156,6 +160,7 @@ header p {
     }
     .container-fotos-esquerda {
         position: static;
+        transform: none;
         margin-bottom: 1.5rem;
         justify-content: center;
     }
