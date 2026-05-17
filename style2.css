@@ -19,25 +19,23 @@ body {
     top: 50%;
     transform: translateY(-50%);
     display: flex;
-    gap: 15px; /* Espaço entre as duas fotos */
+    gap: 25px;
     z-index: 10;
 }
 
-/* Moldura retangular com borda amarela */
 .moldura-foto {
-    width: 200px;           /* Largura do retângulo */
-    height: 60px;           /* Altura do retângulo */
-    border-radius: 4px;     /* Curvinha leve nos cantos */
-    overflow: hidden;       /* Garante que nada da foto passe da borda da moldura */
-    display: flex;          /* Flexbox para ajudar no alinhamento interno */
+    width: 200px;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    background-color: transparent; /* ou a cor que preferir no espaço vazio */
 }
 
 .moldura-foto img {
     width: 100%;
     height: 100%;
-    object-fit: cover;      /* Preenche todo o espaço de 200x90px sem distorcer a imagem */
-    object-position: center; /* Garante que a foto fique centralizada */
-    display: block;
+    object-fit: contain;      /* ← mostra a imagem inteira, sem corte */
+    object-position: center;
 }
 
 /* Ajuste no Header para o título não bater nas fotos */
@@ -80,7 +78,7 @@ header p {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 2rem 1.5rem;
 }
 
 /* Grid das 7 Revoluções */
