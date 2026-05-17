@@ -4,24 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalho de História: Revoluções Brasileiras</title>
-      <link rel="stylesheet" href="style2.css">
-      <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=GFS+Didot&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet" />
-
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=GFS+Didot&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet" />
 </head>
 <body>
 
     <header>
-        <h1>Revoluções Brasileiras</h1>
-        <p>Clique em um dos cards abaixo para explorar a fundo cada movimento histórico.</p>
+        <!-- Fotos posicionadas à esquerda -->
+        <div class="container-fotos-esquerda">
+            <div class="moldura-foto">
+                <img src="fotos/logo 2.jpg" alt="Logo do projeto">
+            </div>
+            <div class="moldura-foto">
+                <img src="fotos/images.png" alt="Imagem histórica">
+            </div>
+        </div>
+
+        <!-- Títulos do cabeçalho -->
+        <div class="header-texto">
+            <h1>Revoluções Brasileiras</h1>
+            <p>Clique em um dos cards abaixo para explorar a fundo cada movimento histórico.</p>
+        </div>
     </header>
 
     <main class="container">
         <section class="revolucoes-grid">
 
             <!-- CARD 1 -->
-            <a href="https://davidev001.github.io/TrabalhoReal/#">
+            <a class="card-link" href="https://davidev001.github.io/TrabalhoReal/#">
                 <article class="revolucao-card">
                     <div class="img-container">
                         <img src="fotos/Revolta armada.jpg" alt="Revolta da Armada">
@@ -31,11 +43,12 @@
                     </div>
                 </article>
             </a>
+
             <!-- CARD 2 -->
-            <a href="https://davidev001.github.io/TrabalhoReal/?aba=Revolta+Federalista">
+            <a class="card-link" href="https://davidev001.github.io/TrabalhoReal/?aba=Revolta+Federalista">
                 <article class="revolucao-card">
                     <div class="img-container">
-                        <img src="fotos/Revolta federalista.jpg" alt="Conjuração Baiana">
+                        <img src="fotos/Revolta federalista.jpg" alt="Revolta Federalista">
                     </div>
                     <div class="card-body">
                         <h2>Revolta Federalista (1893 - 1895)</h2>
@@ -44,10 +57,10 @@
             </a>
 
             <!-- CARD 3 -->
-            <a href="https://davidev001.github.io/TrabalhoReal/?aba=Revolta+de+Canudos">
+            <a class="card-link" href="https://davidev001.github.io/TrabalhoReal/?aba=Revolta+de+Canudos">
                 <article class="revolucao-card">
                     <div class="img-container">
-                        <img src="fotos/Canudos.png" alt="Revolução Pernambucana">
+                        <img src="fotos/Canudos.png" alt="Revolta de Canudos">
                     </div>
                     <div class="card-body">
                         <h2>Revolta de Canudos (1896 - 1897)</h2>
@@ -56,10 +69,10 @@
             </a>
 
             <!-- CARD 4 -->
-            <a href="https://davidev001.github.io/TrabalhoReal/?aba=Revolta+da+Vacina">
+            <a class="card-link" href="https://davidev001.github.io/TrabalhoReal/?aba=Revolta+da+Vacina">
                 <article class="revolucao-card">
                     <div class="img-container">
-                        <img src="fotos/Vacina.png" alt="Confederação do Equador">
+                        <img src="fotos/Vacina.png" alt="Revolta da Vacina">
                     </div>
                     <div class="card-body">
                         <h2>Revolta da Vacina (1904)</h2>
@@ -68,10 +81,10 @@
             </a>
 
             <!-- CARD 5 -->
-            <a href="https://davidev001.github.io/TrabalhoReal/?aba=Revolta+da+Chibata">
+            <a class="card-link" href="https://davidev001.github.io/TrabalhoReal/?aba=Revolta+da+Chibata">
                 <article class="revolucao-card">
                     <div class="img-container">
-                        <img src="fotos/chibatarevolta.jpg" alt="Guerra dos Farrapos">
+                        <img src="fotos/chibatarevolta.jpg" alt="Revolta da Chibata">
                     </div>
                     <div class="card-body">
                         <h2>Revolta da chibata (1910)</h2>
@@ -80,10 +93,10 @@
             </a>
 
             <!-- CARD 6 -->
-            <a href="https://davidev001.github.io/TrabalhoReal/?aba=Revolta+do+Contestado">
+            <a class="card-link" href="https://davidev001.github.io/TrabalhoReal/?aba=Revolta+do+Contestado">
                 <article class="revolucao-card">
                     <div class="img-container">
-                        <img src="fotos/imagem_materia.png" alt="Revolução de 1930">
+                        <img src="fotos/imagem_materia.png" alt="Revolta do Contestado">
                     </div>
                     <div class="card-body">
                         <h2>Revolta do Contestado (1912 - 1916)</h2>
@@ -92,10 +105,10 @@
             </a>
 
             <!-- CARD 7 -->
-            <a href="https://davidev001.github.io/TrabalhoReal/#Copacabanatotal">
+            <a class="card-link" href="https://davidev001.github.io/TrabalhoReal/#Copacabanatotal">
                 <article class="revolucao-card">
                     <div class="img-container">
-                        <img src="fotos/Os_18_do_Forte.jpg" alt="Revolução Constitucionalista de 1932">
+                        <img src="fotos/Os_18_do_Forte.jpg" alt="Revolta do Forte de Copacabana">
                     </div>
                     <div class="card-body">
                         <h2>Revolta do Forte de Copacabana (1922)</h2>
